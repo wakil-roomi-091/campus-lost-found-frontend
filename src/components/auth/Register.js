@@ -115,7 +115,7 @@ const Register = () => {
     setFormError("");
 
     try {
-      const response = await axios.post("http://https://web-production-c29aa.up.railway.app/api/otp/send", {
+      const response = await axios.post("//https://web-production-c29aa.up.railway.app/api/otp/send", {
         email,
         name,
       });
