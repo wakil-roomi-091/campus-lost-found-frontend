@@ -115,10 +115,13 @@ const Register = () => {
     setFormError("");
 
     try {
-      const response = await axios.post("//https://web-production-c29aa.up.railway.app/api/otp/send", {
-        email,
-        name,
-      });
+      const response = await axios.post(
+        "https://web-production-c29aa.up.railway.app/api/otp/send",
+        {
+          email,
+          name,
+        },
+      );
 
       if (response.data.success) {
         setStep(2);
