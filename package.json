@@ -21,12 +21,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false INLINE_RUNTIME_CHUNK=false react-scripts build",
+    "build": "react-scripts build",
+    "build:optimized": "GENERATE_SOURCEMAP=false INLINE_RUNTIME_CHUNK=false react-scripts build",
     "build:analyze": "GENERATE_SOURCEMAP=true react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "optimize-images": "npx imagemin src/assets/images/*.{jpg,png,svg} --out-dir=src/assets/optimized",
-    "prebuild": "npm run optimize-images"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
