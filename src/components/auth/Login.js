@@ -3,8 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { FiMail, FiLock, FiAlertCircle, FiLogIn } from "react-icons/fi";
 import { useAuth } from "../../context/AuthContext";
 import Navbar from "../layout/Navbar";
-import AlertModal from "../common/AlertModal";
-import GoogleLoginButton from "./GoogleLoginButton"; // ADD THIS IMPORT
+import GoogleLoginButton from "./GoogleLoginButton";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -16,12 +15,6 @@ const Login = () => {
   });
 
   const [formError, setFormError] = useState("");
-  const [showAlert, setShowAlert] = useState(false);
-  const [alertConfig, setAlertConfig] = useState({
-    title: "",
-    message: "",
-    type: "success",
-  });
 
   const { email, password } = formData;
 
@@ -175,7 +168,7 @@ const Login = () => {
               </button>
             </form>
 
-            {/* ========== GOOGLE LOGIN DIVIDER ========== */}
+            {/* Google Login Divider */}
             <div className="relative my-6">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-200"></div>
@@ -187,7 +180,7 @@ const Login = () => {
               </div>
             </div>
 
-            {/* ========== GOOGLE LOGIN BUTTON ========== */}
+            {/* Google Login Button */}
             <GoogleLoginButton />
 
             <div className="mt-6 text-center">
@@ -204,14 +197,6 @@ const Login = () => {
           </div>
         </div>
       </div>
-
-      <AlertModal
-        isOpen={showAlert}
-        onClose={() => setShowAlert(false)}
-        title={alertConfig.title}
-        message={alertConfig.message}
-        type={alertConfig.type}
-      />
     </div>
   );
 };
