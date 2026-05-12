@@ -69,7 +69,7 @@ const EditItem = () => {
         const token = localStorage.getItem("token");
 
         const response = await fetch(
-          `http://https://web-production-c29aa.up.railway.app/api/items/${id}`,
+          `https://web-production-c29aa.up.railway.app/api/items/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

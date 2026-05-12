@@ -12,7 +12,7 @@ import {
   FiClock,
   FiAward,
   FiStar,
-  FiTrendingUp,
+  // FiTrendingUp,
   FiMessageSquare,
 } from "react-icons/fi";
 import { FaRegFrown, FaRegSmile } from "react-icons/fa";
@@ -31,9 +31,9 @@ const UserProfile = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [activeTab, setActiveTab] = useState("items");
-  const [ratingsLoading, setRatingsLoading] = useState(false);
-  const [ratingsPage, setRatingsPage] = useState(1);
-  const [ratingsTotal, setRatingsTotal] = useState(0);
+  const [setRatingsLoading] = useState(false);
+  // const [ratingsPage, setRatingsPage] = useState(1);
+  const [setRatingsTotal] = useState(0);
 
   useEffect(() => {
     fetchUserProfile();
@@ -44,7 +44,7 @@ const UserProfile = () => {
   const fetchUserProfile = async () => {
     try {
       const response = await axios.get(
-        `http://https://web-production-c29aa.up.railway.app/api/users/profile/${id}`,
+        `https://web-production-c29aa.up.railway.app/api/users/profile/${id}`,
       );
       if (response.data.success) {
         setProfileUser(response.data.user);
@@ -59,7 +59,7 @@ const UserProfile = () => {
   const fetchUserItems = async () => {
     try {
       const response = await axios.get(
-        `http://https://web-production-c29aa.up.railway.app/api/items/user/${id}`,
+        `https://web-production-c29aa.up.railway.app/api/items/user/${id}`,
       );
       if (response.data.success) {
         setUserItems(response.data.items || []);
@@ -75,7 +75,7 @@ const UserProfile = () => {
     setRatingsLoading(true);
     try {
       const response = await axios.get(
-        `http://https://web-production-c29aa.up.railway.app/api/ratings/user/${id}?page=${page}`,
+        `https://web-production-c29aa.up.railway.app/api/ratings/user/${id}?page=${page}`,
       );
       if (response.data.success) {
         setRatings(response.data.ratings);

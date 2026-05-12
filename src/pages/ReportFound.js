@@ -73,7 +73,7 @@ const ReportFound = () => {
     const fetchCategories = async () => {
       try {
         const response = await axios.get(
-          "http://https://web-production-c29aa.up.railway.app/api/categories",
+          "https://web-production-c29aa.up.railway.app/api/categories",
         );
         if (response.data.success && response.data.categories.length > 0) {
           setCategories(response.data.categories);

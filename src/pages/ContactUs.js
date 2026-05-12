@@ -54,7 +54,7 @@ const ContactUs = () => {
 
     try {
       // Using your existing api.js with the contactAPI we added
-      const response = await contactAPI.sendMessage({
+      await contactAPI.sendMessage({
         ...formData,
         userId: user?.id || null,
       });

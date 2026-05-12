@@ -12,12 +12,12 @@ import {
   FiArrowRight,
   FiGrid,
   FiDownload,
-  FiTrendingUp,
-  FiAward,
-  FiUserCheck,
-  FiTrash2,
-  FiEdit2,
-  FiEye,
+  // FiTrendingUp,
+  // FiAward,
+  // FiUserCheck,
+  // FiTrash2,
+  // FiEdit2,
+  // FiEye,
   FiMail, // Add this import
 } from "react-icons/fi";
 import { useAuth } from "../context/AuthContext";

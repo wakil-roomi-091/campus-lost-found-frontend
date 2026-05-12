@@ -45,7 +45,7 @@ const EmailVerification = ({ email, name, password, onBack }) => {
 
     try {
       const response = await axios.post(
-        "http://https://web-production-c29aa.up.railway.app/api/otp/verify",
+        "https://web-production-c29aa.up.railway.app/api/otp/verify",
         {
           email,
           otp,
@@ -79,7 +79,7 @@ const EmailVerification = ({ email, name, password, onBack }) => {
 
     try {
       const response = await axios.post(
-        "http://https://web-production-c29aa.up.railway.app/api/otp/resend",
+        "https://web-production-c29aa.up.railway.app/api/otp/resend",
         {
           email,
           name,

@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   FiArrowLeft,
-  FiBarChart2,
-  FiCalendar,
+  // FiBarChart2,
+  // FiCalendar,
   FiTrendingUp,
   FiUsers,
   FiPackage,
-  FiCheckCircle,
-  FiClock,
-  FiFilter,
+  // FiCheckCircle,
+  // FiClock,
+  // FiFilter,
   FiRefreshCw,
-  FiFlag,
-  FiUser,
-  FiMessageSquare,
-  FiEye,
-  FiXCircle,
-  FiCheck,
+  // FiFlag,
+  // FiUser,
+  // FiMessageSquare,
+  // FiEye,
+  // FiXCircle,
+  // FiCheck,
 } from "react-icons/fi";
 import { useAuth } from "../context/AuthContext";
 import Navbar from "../components/layout/Navbar";
@@ -58,7 +58,7 @@ const AdminReports = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://https://web-production-c29aa.up.railway.app/api/admin/reports?range=${dateRange}`,
+        `https://web-production-c29aa.up.railway.app/api/admin/reports?range=${dateRange}`,
         { headers: { Authorization: `Bearer ${token}` } },
       );
 

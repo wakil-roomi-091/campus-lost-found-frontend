@@ -29,7 +29,7 @@ const ResetPassword = () => {
   const verifyToken = async () => {
     try {
       const response = await axios.get(
-        `http://https://web-production-c29aa.up.railway.app/api/password/verify/${token}`,
+        `https://web-production-c29aa.up.railway.app/api/password/verify/${token}`,
       );
       if (response.data.valid) {
         setValidToken(true);
@@ -75,7 +75,7 @@ const ResetPassword = () => {
 
     try {
       const response = await axios.post(
-        `http://https://web-production-c29aa.up.railway.app/api/password/reset/${token}`,
+        `https://web-production-c29aa.up.railway.app/api/password/reset/${token}`,
         {
           password,
           confirmPassword,

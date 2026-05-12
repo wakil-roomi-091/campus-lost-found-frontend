@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import {
   FiArrowLeft,
   FiDownload,
-  FiFileText,
+  // FiFileText,
   FiFile,
   FiUsers,
   FiPackage,
@@ -42,7 +42,7 @@ const AdminExport = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://https://web-production-c29aa.up.railway.app/api/export/${endpoint}`,
+        `https://web-production-c29aa.up.railway.app/api/export/${endpoint}`,
         {
           headers: { Authorization: `Bearer ${token}` },
           responseType: "blob",

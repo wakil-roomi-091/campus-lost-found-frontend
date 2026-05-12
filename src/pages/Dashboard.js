@@ -4,19 +4,19 @@ import {
   FiEdit2,
   FiTrash2,
   FiEye,
-  FiMessageSquare,
+  // FiMessageSquare,
   FiPackage,
   FiClock,
   FiCheckCircle,
   FiArrowRight,
   FiMapPin,
-  FiCalendar,
+  // FiCalendar,
   FiUser,
   FiTrendingUp,
-  FiAward,
-  FiGrid,
-  FiPlusCircle,
-  FiActivity,
+  // FiAward,
+  // FiGrid,
+  // FiPlusCircle,
+  // FiActivity,
 } from "react-icons/fi";
 import { FaRegFrown, FaRegSmile } from "react-icons/fa";
 import { useAuth } from "../context/AuthContext";
@@ -76,7 +76,7 @@ const Dashboard = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "http://https://web-production-c29aa.up.railway.app/api/items",
+        "https://web-production-c29aa.up.railway.app/api/items",
         {
           headers: { Authorization: `Bearer ${token}` },
         },

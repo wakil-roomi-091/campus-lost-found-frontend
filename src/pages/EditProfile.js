@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   FiUser,
-  FiMail,
+  // FiMail,
   FiMapPin,
   FiPhone,
   FiFacebook,
@@ -145,7 +145,7 @@ const EditProfile = () => {
           const imageUrl = await uploadToCloudinary(profilePicture);
           console.log("📸 Sending profile picture URL to backend:", imageUrl);
           await axios.post(
-            "http://https://web-production-c29aa.up.railway.app/api/profile/picture",
+            "https://web-production-c29aa.up.railway.app/api/profile/picture",
             { imageUrl },
             { headers: { Authorization: `Bearer ${token}` } },
           );
@@ -156,7 +156,7 @@ const EditProfile = () => {
 
       // Update profile info
       const profileResponse = await axios.put(
-        "http://https://web-production-c29aa.up.railway.app/api/profile/update",
+        "https://web-production-c29aa.up.railway.app/api/profile/update",
         formData,
         { headers: { Authorization: `Bearer ${token}` } },
       );
@@ -164,7 +164,7 @@ const EditProfile = () => {
       if (profileResponse.data.success) {
         // Fetch COMPLETE updated user data from server
         const userResponse = await axios.get(
-          `http://https://web-production-c29aa.up.railway.app/api/users/profile/${user.id}`,
+          `https://web-production-c29aa.up.railway.app/api/users/profile/${user.id}`,
           { headers: { Authorization: `Bearer ${token}` } },
         );
 

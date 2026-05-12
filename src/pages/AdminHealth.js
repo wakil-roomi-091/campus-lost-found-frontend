@@ -5,11 +5,11 @@ import {
   FiActivity,
   FiDatabase,
   FiServer,
-  FiClock,
+  // FiClock,
   FiCpu,
-  FiHardDrive,
+  // FiHardDrive,
   FiZap,
-  FiBarChart2,
+  // FiBarChart2,
   FiRefreshCw,
 } from "react-icons/fi";
 import { useAuth } from "../context/AuthContext";
@@ -42,7 +42,7 @@ const AdminHealth = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "http://https://web-production-c29aa.up.railway.app/api/admin/health",
+        "https://web-production-c29aa.up.railway.app/api/admin/health",
         {
           headers: { Authorization: `Bearer ${token}` },
         },

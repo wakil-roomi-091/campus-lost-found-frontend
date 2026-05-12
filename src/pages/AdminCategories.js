@@ -7,9 +7,9 @@ import {
   FiTrash2,
   FiPackage,
   FiRefreshCw,
-  FiCheck,
+  // FiCheck,
   FiX,
-  FiGripVertical,
+  // FiGripVertical,
 } from "react-icons/fi";
 import { useAuth } from "../context/AuthContext";
 import Navbar from "../components/layout/Navbar";
@@ -133,7 +133,7 @@ const AdminCategories = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        "http://https://web-production-c29aa.up.railway.app/api/categories/all",
+        "https://web-production-c29aa.up.railway.app/api/categories/all",
         {
           headers: { Authorization: `Bearer ${token}` },
         },

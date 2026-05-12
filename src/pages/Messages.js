@@ -4,13 +4,13 @@ import { useNavigate, useLocation, Link } from "react-router-dom";
 import {
   FiSend,
   FiMessageCircle,
-  FiUser,
+  // FiUser,
   FiSearch,
   FiMoreVertical,
   FiCheck,
   FiTrash2,
   FiFlag,
-  FiUserX,
+  // FiUserX,
   FiCheckCircle,
   FiArrowLeft,
 } from "react-icons/fi";
@@ -221,7 +221,7 @@ const Messages = () => {
         try {
           const token = localStorage.getItem("token");
           await axios.post(
-            "http://https://web-production-c29aa.up.railway.app/api/messages/mark-all-read",
+            "https://web-production-c29aa.up.railway.app/api/messages/mark-all-read",
             {},
             { headers: { Authorization: `Bearer ${token}` } },
           );
@@ -252,7 +252,7 @@ const Messages = () => {
         try {
           const token = localStorage.getItem("token");
           await axios.delete(
-            "http://https://web-production-c29aa.up.railway.app/api/messages/clear-all",
+            "https://web-production-c29aa.up.railway.app/api/messages/clear-all",
             {
               headers: { Authorization: `Bearer ${token}` },
             },
@@ -285,7 +285,7 @@ const Messages = () => {
         try {
           const token = localStorage.getItem("token");
           await axios.delete(
-            `http://https://web-production-c29aa.up.railway.app/api/messages/${messageId}`,
+            `https://web-production-c29aa.up.railway.app/api/messages/${messageId}`,
             { headers: { Authorization: `Bearer ${token}` } },
           );
           if (currentChat) {
@@ -310,7 +310,7 @@ const Messages = () => {
         try {
           const token = localStorage.getItem("token");
           await axios.post(
-            "http://https://web-production-c29aa.up.railway.app/api/reports/message",
+            "https://web-production-c29aa.up.railway.app/api/reports/message",
             {
               messageId: messageId,
               messageContent: messageText,

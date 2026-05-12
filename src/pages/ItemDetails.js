@@ -59,7 +59,7 @@ const ItemDetails = () => {
         try {
           const token = localStorage.getItem("token");
           const response = await axios.get(
-            `http://https://web-production-c29aa.up.railway.app/api/ratings/item/${currentItem._id}`,
+            `https://web-production-c29aa.up.railway.app/api/ratings/item/${currentItem._id}`,
             {
               headers: { Authorization: `Bearer ${token}` },
             },
@@ -144,7 +144,7 @@ const ItemDetails = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://https://web-production-c29aa.up.railway.app/api/ratings",
+        "https://web-production-c29aa.up.railway.app/api/ratings",
         {
           toUserId: currentItem.userId?._id,
           itemId: currentItem._id,

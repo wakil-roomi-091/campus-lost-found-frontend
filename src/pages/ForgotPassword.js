@@ -50,7 +50,7 @@ const ForgotPassword = () => {
 
     try {
       const response = await axios.post(
-        "http://https://web-production-c29aa.up.railway.app/api/password/forgot",
+        "https://web-production-c29aa.up.railway.app/api/password/forgot",
         { email },
       );
 
@@ -87,7 +87,7 @@ const ForgotPassword = () => {
 
     try {
       const response = await axios.post(
-        "http://https://web-production-c29aa.up.railway.app/api/password/verify-otp",
+        "https://web-production-c29aa.up.railway.app/api/password/verify-otp",
         {
           email,
           otp,
@@ -137,7 +137,7 @@ const ForgotPassword = () => {
 
     try {
       const response = await axios.post(
-        "http://https://web-production-c29aa.up.railway.app/api/password/reset",
+        "https://web-production-c29aa.up.railway.app/api/password/reset",
         {
           resetToken,
           password,

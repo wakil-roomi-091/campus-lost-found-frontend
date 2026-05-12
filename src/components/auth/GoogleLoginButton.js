@@ -6,7 +6,7 @@ const GoogleLoginButton = () => {
   const handleGoogleLogin = () => {
     // Use this exact URL
     window.location.href =
-      "http://https://web-production-c29aa.up.railway.app/api/auth/google";
+      "https://web-production-c29aa.up.railway.app/api/auth/google";
   };
 
   return (

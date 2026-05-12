@@ -32,13 +32,10 @@ export const ChatProvider = ({ children }) => {
   useEffect(() => {
     if (user) {
       // Connect to socket with proper configuration
-      const newSocket = io(
-        "http://https://web-production-c29aa.up.railway.app",
-        {
-          transports: ["websocket", "polling"],
-          withCredentials: true,
-        },
-      );
+      const newSocket = io("https://web-production-c29aa.up.railway.app", {
+        transports: ["websocket", "polling"],
+        withCredentials: true,
+      });
       setSocket(newSocket);
 
       newSocket.on("connect", () => {
@@ -101,7 +98,7 @@ export const ChatProvider = ({ children }) => {
       if (!token) return;
 
       const response = await axios.get(
-        "http://https://web-production-c29aa.up.railway.app/api/messages/conversations",
+        "https://web-production-c29aa.up.railway.app/api/messages/conversations",
         {
           headers: { Authorization: `Bearer ${token}` },
         },
@@ -123,7 +120,7 @@ export const ChatProvider = ({ children }) => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://https://web-production-c29aa.up.railway.app/api/messages/${otherUserId}`,
+        `https://web-production-c29aa.up.railway.app/api/messages/${otherUserId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         },
@@ -147,7 +144,7 @@ export const ChatProvider = ({ children }) => {
       if (!token) return;
 
       const response = await axios.get(
-        "http://https://web-production-c29aa.up.railway.app/api/messages/unread/count",
+        "https://web-production-c29aa.up.railway.app/api/messages/unread/count",
         {
           headers: { Authorization: `Bearer ${token}` },
         },
