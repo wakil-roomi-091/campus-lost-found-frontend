@@ -31,9 +31,9 @@ const UserProfile = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [activeTab, setActiveTab] = useState("items");
-  const [setRatingsLoading] = useState(false);
+  const [ratingsLoading, setRatingsLoading] = useState(false);
   // const [ratingsPage, setRatingsPage] = useState(1);
-  const [setRatingsTotal] = useState(0);
+  const [ratingsTotal, setRatingsTotal] = useState(0);
 
   useEffect(() => {
     fetchUserProfile();
