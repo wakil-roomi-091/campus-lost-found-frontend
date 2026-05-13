@@ -26,6 +26,7 @@ const CLOUDINARY_UPLOAD_PRESET = "campus_lost_found";
 
 // ✅ Create a CLEAN axios instance for Cloudinary (NO interceptors)
 const cloudinaryAxios = axios.create();
+delete cloudinaryAxios.defaults.headers.common["Authorization"];
 
 const EditProfile = () => {
   const navigate = useNavigate();
