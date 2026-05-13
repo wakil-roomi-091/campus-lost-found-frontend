@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   FiUpload,
-  FiMapPin,
-  FiCalendar,
-  FiType,
-  FiFileText,
+  // FiMapPin,
+  // FiCalendar,
+  // FiType,
+  // FiFileText,
   FiX,
-  FiInfo,
+  // FiInfo,
 } from "react-icons/fi";
 import { useAuth } from "../context/AuthContext";
 import { useItems } from "../context/ItemContext";
@@ -21,7 +21,7 @@ const CLOUDINARY_UPLOAD_PRESET = "campus_lost_found";
 
 // Create a CLEAN axios instance for Cloudinary (NO interceptors)
 const cloudinaryAxios = axios.create();
-
+delete cloudinaryAxios.defaults.headers.common["Authorization"];
 // Fallback categories if API fails or no categories exist
 const FALLBACK_CATEGORIES = [
   { name: "Electronics", color: "blue" },
